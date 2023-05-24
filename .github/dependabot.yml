@@ -1,5 +1,4 @@
 version: 2
-runs-on: vero
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
