@@ -6,4 +6,10 @@ updates:
     schedule:
       interval: "daily"
       # Check for npm updates at 9am UTC
-      time: "09:54"
+      time: 10:00"
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "10:00"
