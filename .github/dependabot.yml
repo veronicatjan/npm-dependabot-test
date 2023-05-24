@@ -6,4 +6,4 @@ updates:
     schedule:
       interval: "daily"
       # Check for npm updates at 9am UTC
-      time: "09:36"
+      time: "09:54"
