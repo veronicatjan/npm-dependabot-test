@@ -1,5 +1,6 @@
 name: 'Combine PRs'
 
+# Setting up the configuration input
 on:
   workflow_dispatch:
     inputs:
@@ -34,7 +35,7 @@ jobs:
       id: create-combined-pr
       uses: github/combine-prs@v3.1.1
       with:
-        github_token: ${{ secrets.BOT_PAT }}
+        github_token: ${{ github.token }}
         ignore_label: ${{ github.event.inputs.ignoreLabel }}
         ci_required: ${{ github.event.inputs.mustBeGreen }}
         branch_prefix: ${{ github.event.inputs.branchPrefix }}
