@@ -23,7 +23,7 @@ on:
 
 jobs:
   combine-prs:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions: write-all
     steps:
     - name: Create Combined PR
