@@ -7,7 +7,7 @@ on:
         description: 'Branch prefix to find combinable PRs based on'
         required: true
         default: 'dependabot'
-      ciMustBeGreen:
+      mustBeGreen:
         description: 'Only combine PRs that are green (status is success). Set to false if repo does not run checks'
         type: boolean
         required: true
@@ -32,6 +32,6 @@ jobs:
       with:
         github_token: ${{ secrets.BOT_PAT }}
         ignore_label: ${{ github.event.inputs.ignoreLabel }}
-        ci_required: ${{ github.event.inputs.ciMustBeGreen }}
+        ci_required: ${{ github.event.inputs.mustBeGreen }}
         branch_prefix: ${{ github.event.inputs.branchPrefix }}
-
+        combine_branch_name: ${{ github.event.inputs.combineBranchName }}
