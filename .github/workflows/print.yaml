@@ -1,0 +1,17 @@
+name: Print GitHub Context
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print_context_ec2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub Context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Print GitHub Context Variables
+        run: printenv
+      - name: Print Github Runner apt list
+        run: dpkg --list | grep '^ii'
